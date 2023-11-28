@@ -4,9 +4,9 @@
 Voici les prérequis pour lancer le site avec les containeurs:
 
 - Docker Desktop doit être installé et doit se lancer avec WSL et non hyper-v
-- Installer WSL
-- Visual Studio Code doit être installé.
-- Dev containers doivent être installé dans Visual Studio Code.
+- WSL version 2 (si possible Ubuntu 22.04) doit être installé
+- Visual Studio Code doit être installé
+- Dev containers doivent être installé dans Visual Studio Code
 
 Pour les personnes qui souhaitent refaire le projet à 0, il y a un petit script qui permet de tout créer.
 Voici ce que j'ai utilisé depuis mon WSL:
