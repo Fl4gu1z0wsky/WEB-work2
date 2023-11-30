@@ -15,23 +15,15 @@ curl -s "https://laravel.build/WEB-PW2?with=mysql,redis&devcontainer" | bash
 ```
 Cela crée ce qu'il faut pour pouvoir lancer le porjet.
 
-## Créer les containeurs
-Il faut faire cette étape:
-Une fois le projet chargé, il faut aller dans le dossier via wsl et ouvrir le tout dans Visual Studio avec la commande suivante:
+## Créer les containeurs pour faire démarrer le site web
+Une fois le projet chargé dans WSL à l'aide d'un "git clone", il faut aller dans le dossier via l'invite de commande wsl et ouvrir le tout dans Visual Studio avec la commande suivante:
 ```
 code .
 ```
-
-Ouvrez le terminal dans Visual studio et entrez la commande suivante:
-```
-./vendor/bin/sail up
-```
-Il faudra entrer cette commande pour que le tout se lance et que les container se créent.
-
-Si vous souhaitez intéragir avec Laravel, il faut ouvrir le shell qui est fait pour:
-```
-./vendor/bin/sail shell
-```
+  
+Puis, lorsque le popup apparaît, cliquez sur "Reopen in container". Cela va charger les containeurs et ouvrir le site avec ce qu'il faut.   
+Si le popup n'apparaît pas, vous pouvez aller dans "view" -> "command palette" et choisir "Dev Containers: Open Folder in Container".
+   
 
 ## Schéma DB
 Voici le schéma de la table animal:
