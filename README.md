@@ -32,11 +32,3 @@ Table: Animals
 ## Ce qui est utilisé
 Cette app web utilise:
 php, mysql, redis, laravel et eloquent.   
-
-## Diverse
-Pour les personnes qui souhaitent refaire le projet à 0, il y a un petit script qui permet de tout créer avec l'aide de Laravel.   
-Voici ce que j'ai utilisé depuis mon WSL:   
-```
-curl -s "https://laravel.build/WEB-PW2?with=mysql,redis&devcontainer" | bash 
-```
-Cela crée ce qu'il faut pour pouvoir le lancer. 
