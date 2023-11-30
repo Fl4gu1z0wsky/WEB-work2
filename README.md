@@ -24,7 +24,7 @@ Table: Animals
 - id (Primary Key)
 - name
 - species
-- sex
+- sexe
 - age
 - country
 - comment
