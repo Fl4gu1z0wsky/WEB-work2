@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Animal;
+use Illuminate\Support\Facades\Validator;
+
 
 class AnimalController extends Controller
 {
@@ -58,7 +60,22 @@ class AnimalController extends Controller
     {
         
         try {
-            
+
+            // Vérifie l'input de l'utilisateur
+            $validator = Validator::make($request->all(), [
+                'name' => 'required|string|regex:/^[a-zA-Z\-]{3,16}$/',
+                'species' => 'required|string|regex:/^[a-zA-Z\-]{3,16}$/',
+                'sexe' => 'required|string',
+                'age' => 'required|numeric|between:0,300',
+                'country' => 'required|string|regex:/^[a-zA-Z\-\s]{3,16}$/',
+                'comment' => 'nullable|string|max:50',
+            ]);
+
+            // Check si ça fail
+            if ($validator->fails()) {
+                return redirect('/add-animal')->with('error', 'Erreur d\'entrée de la part de l\'utliisateur');
+            }
+
             // Créer un nouvel animal
             Animal::create([
                 'name' => $request->input('name'),
@@ -71,10 +88,8 @@ class AnimalController extends Controller
             return redirect('/add-animal')->with('success', 'Animal ajouté avec succès.');
 
         } catch (\Exception $e) {
-
             // En cas d'erreur, on prévient l'utilisateur
             return redirect('/add-animal')->with('error', 'Une erreur s\'est produite lors de l\'ajout de l\'animal.');
-
         }      
 
     }
@@ -107,6 +122,23 @@ class AnimalController extends Controller
     {
 
         try {
+            
+            // Vérifie l'input de l'utilisateur
+            $validator = Validator::make($request->all(), [
+                'name' => 'required|string|regex:/^[a-zA-Z\-]{3,16}$/',
+                'species' => 'required|string|regex:/^[a-zA-Z\-]{3,16}$/',
+                'sexe' => 'required|string',
+                'age' => 'required|numeric|between:0,300',
+                'country' => 'required|string|regex:/^[a-zA-Z\-\s]{3,16}$/',
+                'comment' => 'nullable|string|max:50',
+            ]);
+
+            // Check si ça fail
+            if ($validator->fails()) {
+                return redirect('/add-animal')->with('error', 'Erreur d\'entrée de la part de l\'utliisateur');
+            }
+            
+            // Modifie l'animal si tout est bon
             $animal->update([
                 'name' => $request->input('name'),
                 'species' => $request->input('species'),

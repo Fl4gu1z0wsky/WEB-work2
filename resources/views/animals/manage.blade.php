@@ -35,7 +35,8 @@
             <div class="card mb-3">
                 <div class="card-body">
                     <h5 class="card-title">{{ $animal->name }}</h5>
-                    <p class="card-text">Espèce: {{ $animal->species }}</p>
+                    <p class="card-text">Espèce: {{ $animal->species }}</p>                    
+                    <p class="card-text">Sexe: {{ $animal->sexe }}</p>
                     <p class="card-text">Âge: {{ $animal->age }}</p>
                     <p class="card-text">Pays: {{ $animal->country }}</p>
                     <p class="card-text">Commentaire: {{ $animal->comment }}</p>
