@@ -8,13 +8,6 @@ Voici les prérequis pour lancer le site avec les containeurs:
 - Visual Studio Code doit être installé
 - Dev containers doivent être installé dans Visual Studio Code
 
-Pour les personnes qui souhaitent refaire le projet à 0, il y a un petit script qui permet de tout créer.
-Voici ce que j'ai utilisé depuis mon WSL:
-```
-curl -s "https://laravel.build/WEB-PW2?with=mysql,redis&devcontainer" | bash 
-```
-Cela crée ce qu'il faut pour pouvoir lancer le porjet.
-
 ## Créer les containeurs pour faire démarrer le site web
 Une fois le projet chargé dans WSL à l'aide d'un "git clone", il faut aller dans le dossier via l'invite de commande wsl et ouvrir le tout dans Visual Studio avec la commande suivante:
 ```
@@ -38,4 +31,12 @@ Table: Animals
 
 ## Ce qui est utilisé
 Cette app web utilise:
-php, mysql, redis, laravel et eloquent.
+php, mysql, redis, laravel et eloquent.   
+
+## Diverse
+Pour les personnes qui souhaitent refaire le projet à 0, il y a un petit script qui permet de tout créer avec l'aide de Laravel.   
+Voici ce que j'ai utilisé depuis mon WSL:   
+```
+curl -s "https://laravel.build/WEB-PW2?with=mysql,redis&devcontainer" | bash 
+```
+Cela crée ce qu'il faut pour pouvoir le lancer. 
