@@ -1,4 +1,10 @@
 # WEB-work2
+## Introduction
+Pour ce laboratoire, nous devons démontrer notre capacité à créer un site web dynamique en utilisant PHP ainsi qu'une base de données.
+L'objectif est de concevoir un site qui me permettra de gérer un ensemble de données. 
+Ces données peuvent être de n'importe quel type, comme une liste de livres, une liste de films, une liste d'étudiants, etc.   
+
+Pour ma part, j'ai choisi de faire une liste d'animaux pour remplir un zoo.
 
 ## Dépendences
 Voici les prérequis pour lancer le site avec les containeurs:
