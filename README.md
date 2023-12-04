@@ -38,7 +38,7 @@ Une autre façon de lancer les containeurs (pour remplacer ./vendor/bin/sail up 
 ```
 code .
 ```
-Puis, lorsque le popup apparaît, cliquez sur "Reopen in container". Cela va charger les containeurs et ouvrir le site (il faudra toujours nourrir faire les tapes avec la DB, sinon rien n'apparaît).   
+Puis, lorsque le popup apparaît, cliquez sur "Reopen in container". Cela va charger les containeurs et il sera possible d'ouvrir le site (il faudra toujours nourrir faire les étapes avec artisan pour construire la DB, sinon rien n'apparaît).   
 Si le popup n'apparaît pas, vous pouvez aller dans "view" -> "command palette" et choisir "Dev Containers: Open Folder in Container".  
    
 
